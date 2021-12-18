@@ -485,7 +485,7 @@ void WindowManager::SetTitleBarStyle(const flutter::EncodableMap &args)
     {
 //        gwlStyle = gwlStyle & ~WS_CAPTION;
         gwlStyle = gwlStyle &~WS_CAPTION &~WS_SYSMENU &~WS_SIZEBOX;
-        gwlStyle = gwlStyle &~WS_CAPTION  &~WS_SYSMENU;
+        gwlStyle = gwlStyle &~WS_CAPTION ;
         SetWindowLong(hWnd, GWL_STYLE, gwlStyle);
     }
     else
