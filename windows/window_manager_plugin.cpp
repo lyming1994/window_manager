@@ -103,7 +103,7 @@ std::optional<LRESULT> WindowManagerPlugin::HandleWindowProc(HWND hWnd, UINT mes
             AdjustWindowRectEx(&borderThickness, GetWindowLongPtr(hWnd, GWL_STYLE) & ~WS_CAPTION, FALSE, NULL);
             NCCALCSIZE_PARAMS *sz = reinterpret_cast<NCCALCSIZE_PARAMS *>(lParam);
             // Add 1 pixel to the top border to make the window resizable from the top border
-            sz->rgrc[0].top -= 1;
+            sz->rgrc[0].top += 1;
             sz->rgrc[0].right -= borderThickness.right;
             sz->rgrc[0].bottom -= borderThickness.bottom;
 

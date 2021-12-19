@@ -484,8 +484,7 @@ void WindowManager::SetTitleBarStyle(const flutter::EncodableMap &args)
     if (titleBarStyle == "hidden")
     {
         gwlStyle = gwlStyle &~WS_CAPTION;
-        SetWindowLong(hWnd, GWL_STYLE, gwlStyle);
-        SetWindowLong(hWnd, GWL_EXSTYLE, gwlStyle);
+        SetWindowLong(hWnd, GWL_STYLE, WS_DLGFRAME );
     }
     else
     {
